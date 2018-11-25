@@ -18,6 +18,14 @@ public class Ostoskori {
         tuotteet.remove(t);
     }
 
+    public boolean sisaltaa(int id) {
+        for (Tuote t : tuotteet) {
+            if (t.getId() == id)
+                return true;
+        }
+        return false;
+    }
+
     public int hinta() {
         int hinta = 0;
 

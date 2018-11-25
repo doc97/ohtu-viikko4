@@ -21,8 +21,11 @@ public class Kauppa {
     }
 
     public void poistaKorista(int id) {
-        Tuote t = varasto.haeTuote(id); 
-        varasto.palautaVarastoon(t);
+        if (ostoskori.sisaltaa(id)) {
+            Tuote t = varasto.haeTuote(id);
+            ostoskori.poista(t);
+            varasto.palautaVarastoon(t);
+        }
     }
 
     public void lisaaKoriin(int id) {
