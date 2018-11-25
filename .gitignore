@@ -207,3 +207,5 @@ gradle-app.setting
 
 .idea/
 *.iml
+
+private/
